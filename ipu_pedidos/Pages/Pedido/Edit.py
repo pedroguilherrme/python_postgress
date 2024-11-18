@@ -13,7 +13,7 @@ def Editar():
         if not input_id:
             st.error('Campos Id não pode ser nulo!!')
         else:
-            pedidos.id = input_id
+            pedidos.idpedido = input_id
             pedidos.nome_produto = input_name
-            pedidos.update_pedido(pedidos.nome_produto,pedidos.id)
+            pedidos.update_pedido(pedidos.nome_produto,pedidos.idpedido)
             st.success('Produto atualizado com sucesso.')

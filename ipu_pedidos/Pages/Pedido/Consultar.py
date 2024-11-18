@@ -10,7 +10,7 @@ def Consultar():
     
     df = pd.DataFrame(
         costumeList,
-        columns=('Id','Nome do Produto', 'Nome do Cliente', 'Data')
+        columns=('IdPedido','Nome do Produto', 'Nome do Cliente', 'Data')
     )
 
     st.table(df)

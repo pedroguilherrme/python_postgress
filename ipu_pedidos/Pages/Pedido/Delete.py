@@ -11,6 +11,6 @@ def Delete():
         if not input_id:
             st.error('Campos Id não pode ser nulo!!')
         else:
-            pedidos.id = input_id
-            pedidos.delete_pedido(pedidos.id)
+            pedidos.idpedido = input_id
+            pedidos.delete_pedido(pedidos.idpedido)
             st.success('Pedido excluido com sucesso.')
