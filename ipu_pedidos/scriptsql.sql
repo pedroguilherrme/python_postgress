@@ -1,3 +1,18 @@
+create table pedidos(
+	idpedido serial not null,
+	nome_produto varchar(50) not null,
+	nome_cliente varchar(50) not null,
+	data_pedido date not null,
+
+	constraint pk_pdd_idpedido primary key (idpedido)
+	
+);
+
+select * from pedidos;
+
+
+
+
 create table produto(
 	idproduto serial not null,
 	nome varchar(50) not null,
@@ -79,6 +94,8 @@ update vendas set idproduto = 6 where idvenda = 7;
 select * from cliente;
 select * from produto;
 select * from funcionario;
+select * from pedidos;
+
 
 
 ---------------------------------------------------------
