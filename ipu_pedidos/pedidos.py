@@ -29,25 +29,24 @@ def insert_pedido(nome_produto,nome_cliente):
     finally:
         db_connect.db_close_connection
 
-def delete_pedido(id):
+def delete_pedido(idpedido):
     try:
         connection = db_connect.db_open_connection()
 
         cursor = connection.cursor()
-        cursor.execute("DELETE FROM pedidos WHERE id = %s;",(id,))
+        cursor.execute("DELETE FROM pedidos WHERE idpedido = %s;",(idpedido,))
         connection.commit()
         print("Pedido deletado com sucesso.")
     except Exception as e:
         print("Erro ao deletar",e)
     finally:
         db_connect.db_close_connection(connection)
-
-def update_pedido(id,nome_produto):
+def update_pedido(idpedido,nome_produto):
     try:
         connection = db_connect.db_open_connection()
 
         cursor = connection.cursor()
-        cursor.execute("UPDATE pedidos SET nome_produto = %s WHERE id = %s;",(id,nome_produto))
+        cursor.execute("UPDATE pedidos SET nome_produto = %s WHERE idpedido = %s;",(idpedido,nome_produto))
         connection.commit()
         print("Pedido atualizado com sucesso.")
     except Exception as e:
@@ -55,4 +54,4 @@ def update_pedido(id,nome_produto):
     finally:
         db_connect.db_close_connection(connection)
 
-update_pedido('Biscoito', 15)
+
